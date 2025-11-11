@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background: #000000;
+  color: #e5e7eb;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main {
+  padding: 60px 0 80px;
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 40px 0 60px;
+  }
+}

@@ -1,0 +1,208 @@
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 24px;
+  padding: 36px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  display: flex;
+  flex-direction: column;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow:
+    0 16px 48px rgba(56, 189, 248, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.icon {
+  font-size: 56px;
+  margin-bottom: 24px;
+  text-align: center;
+  filter: drop-shadow(0 4px 12px rgba(56, 189, 248, 0.3));
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.description {
+  font-size: 15px;
+  color: #9ca3af;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.pricing {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(56, 189, 248, 0.15);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 28px;
+  flex-grow: 1;
+}
+
+.simplePricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.priceItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.priceItem:not(:last-child) {
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.label {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #38BDF8;
+}
+
+.detailedPricing {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+
+.section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.section:not(:last-child) {
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.section.premium {
+  background: rgba(56, 189, 248, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: #38BDF8;
+  margin-bottom: 12px;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.sectionNote {
+  font-size: 12px;
+  color: #9ca3af;
+  text-align: center;
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.priceRow span:first-child {
+  color: #d1d5db;
+}
+
+.priceRow span:last-child {
+  color: #38BDF8;
+  font-weight: 600;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px 32px;
+  background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow:
+    0 4px 16px rgba(56, 189, 248, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 24px rgba(56, 189, 248, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 100%);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 28px;
+  }
+
+  .icon {
+    font-size: 48px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px;
+  }
+
+  .button {
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+}
